@@ -22,7 +22,7 @@ jobs:
           cache: maven
 
       - name: Compile project
-        run: ./mvnw clean compile
+        run: mvn -B clean compile
 
   test:
     name: Test
@@ -40,7 +40,7 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: ./mvnw test
+        run: mvn -B test
 
   docker:
     name: Build and Push Docker Image
